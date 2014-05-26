@@ -7,8 +7,8 @@ import urlparse
 import facebook
 import sys 
 
-FB_ID = '289943914484059'
-FB_secret = 'ac5100411683881dc04a68ad8bf560ed'
+FB_ID = ''
+FB_secret = ''
 
 def crawl( url ) :
 	return json.load(urllib2.urlopen(url) )
@@ -35,10 +35,6 @@ def init() :
 reload(sys)
 sys.setdefaultencoding('utf-8')
 access_token = init()
-
-#base_url = 'https://graph.facebook.com/lslandnationyouth'
-#fields = 'id,name,posts.limit(300)'
-#url = '%s?fields=%s&access_token=%s' % (base_url, fields, access_token, )
 
 g = facebook.GraphAPI(access_token)
 
